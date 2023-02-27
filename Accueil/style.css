@@ -1,75 +1,114 @@
 body {
-  background-color: rgba(0, 0, 0, 0.801);
+  background-color: rgba(0, 0, 0, 0.75);
   overflow-x: hidden;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #navigationBar {
   display: flex;
-  position: absolute;
-  left: 0%;
-  height: 39rem;
-  width: 4rem;
-  background-color: black;
-  padding: 0.25rem;
+  position: sticky;
+  top: 0.5rem;
+  left: 0rem;
+  height: 64px;
+  width: 64px;
+  overflow: hidden;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 .sideways:not(:hover) {
-  transform: translateX(-3.75rem);
+  transform: translateX(-86px);
   transition: all 275ms ease-in;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 .sideways:hover {
+  transform: translateX(-12px);
   transition: all 275ms ease-in;
+  background-color: rgba(0, 0, 0, 0.90);
 }
 
-#paragraphNav {
-  background-color: blue;
-  width: 3rem;
-  height: 3rem;
-}
 
-#flexContainer {
-  display: inline-flex;
 
-  border: 0.25rem solid black;
 
-  width: 30%;
-  height: max-content;
-
-  margin-left: 4rem;
-
-  justify-content: space-around;
-  align-items: space-around;
-  flex-direction: row;
+/* Container pour les 4 ronds et 4 rectangles */
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-
+  width: 12rem;
+  height: 52rem;
+  border: solid 10px black;
   padding: 1rem;
+  overflow: hidden;
+}
+.container:hover {
+  width: 60rem;
+  transition: all 250ms ease-in-out;
+}
+.container:not(:hover) {
+  width: 12rem;
+  transition: all 250ms ease-in-out;
 }
 
-.containerItemStart {
-  text-align: center;
-  width: 10rem;
-  height: 10rem;
-  border: 0.25rem solid black;
-  margin: 0.5rem;
+/* Ronds */
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 12rem;
+  background-color: aliceblue;
+  margin: auto;
+  position: relative;
+  border-radius: 50%;
 }
-
-#item1 {
-  background-color: rebeccapurple;
-}
-
-.shownStuff {
+/* Rectangles */
+.rectangle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 12rem;
+  background-color: white;
   position: absolute;
-  right: 0%;
-  top: 0%;
-  height: 36rem;
-  width: 36rem;
-  margin-top: 2rem;
-  margin-right: 2rem;
-  border: 1rem solid black;
+  right: -100%;
+  top: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+/* CSS pour rectangles quand hover */
+.square:hover .rectangle {
+  display: flex;
+  transform: translateX(13rem);
+  transition: all 0.5s ease-in-out;
+  width: 24rem;
+  border-radius: 1rem;
+}
+/* CSS pour rectangles quand non-hover */
+.square:not(hover) .rectangle {
+  left: 0rem;
+
+  transition: all 0.5s ease-in-out;
 }
 
-.shownStuff.show {
-    transform: translateX(60rem);
-    transition: all 333ms ease-out;
+/* Hover sur ID "purple" transforme bg rouge linear, retourne default de la classe ".square" apres... */
+#purple:hover {
+  background-color: #44164d;
+  transition: all 0.2s ease-out;
+}
 
+/* Hover sur ID "green" transforme bg rouge linear, retourne default de la classe ".square" apres... */
+#green:hover {
+  background-color: #17471f;
+  transition: all 0.2s ease-out;
+}
+
+/* Hover sur ID "red" transforme bg rouge linear, retourne default de la classe ".square" apres... */
+#red:hover {
+  background-color: #700303;
+  transition: all 0.2s ease-out;
+}
+
+#turquoise:hover {
+  background-color: turquoise;
+  transition: all 0.2s ease-out;
 }
