@@ -13,7 +13,7 @@ body {
   #wrapperForEverything {
     height: 100dvh;
     width: 100dvw;
-    background-image: url('.../bgChute.JPG');
+    background-image: url('./bgChute.JPG');
     background-size: cover;
     z-index: -1;
   }
@@ -169,6 +169,7 @@ body {
   }
   #navigationBar {
     display: flex;
+    flex-direction: column;
     position: absolute;
     top: 0%;
     left: 0%;
