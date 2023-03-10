@@ -13,7 +13,7 @@ body {
   #wrapperForEverything {
     height: 100dvh;
     width: 100dvw;
-    background-image: url('/docs/Images/bgChutes.JPG');
+    background-image: url('/docs/bgChute.JPG');
     background-size: cover;
     z-index: -1;
   }
@@ -30,11 +30,11 @@ body {
   }
   #navigationBar:not(:hover) {
     transition: all 275ms ease-in;
-    background-color: rgba(100, 100, 100, 0.25);
+    background-color: rgba(100, 100, 100, 0.15);
   }
   #navigationBar:hover {
     transition: all 275ms ease-in;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(100, 100, 100, 0.85);
   }
   #imageAccueil {
     display: flex;
@@ -84,10 +84,11 @@ body {
   transition: all 500ms ease-out;
 }
 .circleWhileShown {
-  width: 20dvw;
-  height: 20dvw;
+  width: 12dvw;
+  height: 12dvw;
   background-color: rgba(200, 200, 200, 0.15);
   z-index: 1;
+  transform: translateX(-5dvh);
   transition: all 500ms ease-out;
 }
 

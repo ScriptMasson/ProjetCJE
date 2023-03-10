@@ -25,7 +25,7 @@ const turquoise = document.getElementById('turquoise');
 const turquoiseRectangle = document.getElementById('turquoiseRectangle');
 turquoise.addEventListener('click', () => {
     turquoiseRectangle.classList.toggle('show');
-    purple.classList.toggle('circleWhileShown');
+    turquoise.classList.toggle('circleWhileShown');
 });
 })();
 
