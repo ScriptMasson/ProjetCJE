@@ -13,7 +13,7 @@ body {
   #wrapperForEverything {
     height: 100dvh;
     width: 100dvw;
-    background-image: url('/docs/bgChute.JPG');
+    background-image: url('.../bgChute.JPG');
     background-size: cover;
     z-index: -1;
   }
