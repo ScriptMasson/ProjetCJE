@@ -1,19 +1,18 @@
-* {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0; 
-}
-body {
-  background-color: rgba(0, 0, 0, 0.85);
-  font-family: cursive;
-}
-
 /* Styles pour desktop */
-@media (min-width: 768px) {
+@media (orientation: landscape) {
+  * {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: rgba(0, 0, 0, 0.85);
+    font-family: cursive;
+  }
   #wrapperForEverything {
     height: 100dvh;
     width: 100dvw;
-    background-image: url('./bgChute.JPG');
+    background-image: url("./bgChute.JPG");
     background-size: cover;
     z-index: -1;
   }
@@ -43,130 +42,136 @@ body {
   }
 
   /* Cercles */
-.cercle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 20dvh;
-  height: 20dvh;
-  background-color: aliceblue;
-  border-radius: 50%;
-}
-/* Rectangles */
-.rectangle {
-  position: absolute;
-  top: 36dvh;
-  left: -100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 60dvw;
-  height: 60dvh;
-  background-color: white;
-  border-radius: 3% 3%;
+  .cercle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20dvh;
+    height: 20dvh;
+    background-color: aliceblue;
+    border-radius: 50%;
+  }
+  /* Rectangles */
+  .rectangle {
+    position: absolute;
+    top: 36dvh;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 60dvw;
+    height: 60dvh;
+    background-color: white;
+    border-radius: 3% 3%;
+  }
+  .rectangle span {
+    font-size: 5dvh;
+    font-style: italic;
+  }
+  .rectangle a {
+    all: unset;
+    color: azure;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .show {
+    left: 8dvh;
+    transition: all 500ms ease-out;
+  }
+  .circleWhileShown {
+    width: 12dvw;
+    height: 12dvw;
+    background-color: rgba(200, 200, 200, 0.15);
+    z-index: 1;
+    transform: translateX(-5dvh);
+    transition: all 500ms ease-out;
+  }
 
-}
-.rectangle span {
-  font-size: 5dvh;
-  font-style: italic;
-}
-.rectangle a {
-  all: unset;
-  color: azure;
-  font-style: italic;
-  font-weight: bold;
-}
-.show {
-  left: 8dvh;
-  transition: all 500ms ease-out;
-}
-.circleWhileShown {
-  width: 12dvw;
-  height: 12dvw;
-  background-color: rgba(200, 200, 200, 0.15);
-  z-index: 1;
-  transform: translateX(-5dvh);
-  transition: all 500ms ease-out;
-}
+  /*  */
+  #purple {
+    position: absolute;
+    top: 8dvh;
+    left: 8dvh;
+    cursor: pointer;
+  }
+  /* Hover sur ID "purple" transforme bg rouge linear, retourne default de la classe ".square" apres... */
+  #purple:hover {
+    background-color: #44164d;
+    transition: all 0.2s ease-out;
+  }
+  #purpleRectangle {
+    background-color: #44164d;
+    transition: all 500ms ease-in-out;
+  }
 
+  #green {
+    position: absolute;
+    top: 8dvh;
+    left: 40dvh;
+  }
+  /* Hover sur ID "green" transforme bg rouge linear, retourne default de la classe ".square" apres... */
+  #green:hover {
+    background-color: #17471f;
+    transition: all 0.2s ease-out;
+  }
+  #greenRectangle {
+    background-color: #17471f;
+    transition: all 500ms ease-in-out;
+  }
 
-/*  */
-#purple {
-  position: absolute;
-  top: 8dvh;
-  left: 8dvh;
-  cursor: pointer;
-}
-/* Hover sur ID "purple" transforme bg rouge linear, retourne default de la classe ".square" apres... */
-#purple:hover {
-  background-color: #44164d;
-  transition: all 0.2s ease-out;
-}
-#purpleRectangle {
-  background-color: #44164d;
-  transition: all 500ms ease-in-out;
-}
+  #red {
+    position: absolute;
+    top: 8dvh;
+    left: 72dvh;
+  }
+  /* Hover sur ID "red" transforme bg rouge linear, retourne default de la classe ".square" apres... */
+  #red:hover {
+    background-color: #700303;
+    transition: all 0.2s ease-out;
+  }
+  #redRectangle {
+    background-color: #700303;
+    transition: all 500ms ease-in-out;
+  }
 
-
-
-
-#green {
-  position: absolute;
-  top: 8dvh;
-  left: 40dvh; 
-}
-/* Hover sur ID "green" transforme bg rouge linear, retourne default de la classe ".square" apres... */
-#green:hover {
-  background-color: #17471f;
-  transition: all 0.2s ease-out;
-}
-#greenRectangle {
-  background-color: #17471f;
-  transition: all 500ms ease-in-out;
-}
-
-#red {
-  position: absolute;
-  top: 8dvh;
-  left: 72dvh;
-}
-/* Hover sur ID "red" transforme bg rouge linear, retourne default de la classe ".square" apres... */
-#red:hover {
-  background-color: #700303;
-  transition: all 0.2s ease-out;
-}
-#redRectangle {
-  background-color: #700303;
-  transition: all 500ms ease-in-out;
-}
-
-#turquoise {
-  position: absolute;
-  top: 8dvh;
-  left: 104dvh;
-}
-#turquoise:hover {
-  background-color: turquoise;
-  transition: all 0.2s ease-out;
-}
-#turquoiseRectangle {
-  background-color: turquoise;
-  transition: all 500ms ease-in-out;
-}
-
-}/* Fin de Desktop */
-
-
+  #turquoise {
+    position: absolute;
+    top: 8dvh;
+    left: 104dvh;
+  }
+  #turquoise:hover {
+    background-color: turquoise;
+    transition: all 0.2s ease-out;
+  }
+  #turquoiseRectangle {
+    background-color: turquoise;
+    transition: all 500ms ease-in-out;
+  }
+} /* Fin de Desktop */
 
 /* Styles for mobile */
-@media (max-width: 767px) {
+@media (orientation: portrait) {
+  * {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: rgba(0, 0, 0, 0.85);
+    font-family: cursive;
+  }
   #wrapperForEverything {
     height: 100dvh;
     width: 100dvw;
+    background-image: url("./bgRiviere_Mobile.JPG");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
   }
+
   #navigationBar {
     display: flex;
     flex-direction: column;
@@ -194,128 +199,120 @@ body {
     margin-top: auto;
     margin-bottom: auto;
   }
-  /* Container pour les 4 ronds et 4 rectangles */
-.containerL {
-  position: absolute;
-  left: 0%;
-  top: 6.5dvh;
 
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 12rem;
-  height: max-content;
-  border: solid 1px black;
-  padding: 1rem;
-  overflow: hidden;
+  /* Cercles */
+  .cercle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 10dvh;
+    height: 10dvh;
+    background-color: aliceblue;
+    border-radius: 50%;
+    font-size: 35%;
+  }
+  /* Rectangles */
+  .rectangle {
+    box-sizing: border-box;
+    position: absolute;
+    top: 20dvh;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 60dvw;
+    height: auto;
+    background-color: white;
+    border-radius: 3% 3%;
+    padding: 1dvh;
+  }
+  .rectangle span {
+    font-size: 50%;
+    font-style: italic;
+  }
+  .rectangle a {
+    all: unset;
+    color: azure;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  /* toggled classes via JS */
+  .show {
+    left: 8dvh;
+    transition: all 500ms ease-out;
+  }
+  .circleWhileShown {
+    width: 7dvh;
+    height: 7dvh;
+    background-color: rgba(200, 200, 200, 0.15);
+    z-index: 1;
+    font-size: 20%;
+    transition: all 500ms ease-out;
+  }
+
+  /* Circles styles */
+  /* ID "purple" */
+  #purple {
+    position: absolute;
+    top: 8dvh;
+    left: 2dvh;
+    cursor: pointer;
+  }
+  #purple:hover {
+    background-color: #44164d;
+    transition: all 0.2s ease-out;
+  }
+  #purpleRectangle {
+    background-color: #44164d;
+    transition: all 500ms ease-in-out;
+  }
+
+  /* ID "green" */
+  #green {
+    position: absolute;
+    top: 8dvh;
+    left: 14dvh;
+  }
+  #green:hover {
+    background-color: #17471f;
+    transition: all 0.2s ease-out;
+  }
+  #greenRectangle {
+    background-color: #17471f;
+    transition: all 500ms ease-in-out;
+  }
+
+  /* ID "red"  */
+  #red {
+    position: absolute;
+    top: 8dvh;
+    left: 26dvh;
+  }
+  #red:hover {
+    background-color: #700303;
+    transition: all 0.2s ease-out;
+  }
+  #redRectangle {
+    background-color: #700303;
+    transition: all 500ms ease-in-out;
+  }
+
+  /* ID "turquoise"  */
+  #turquoise {
+    position: absolute;
+    top: 8dvh;
+    left: 38dvh;
+  }
+  #turquoise:hover {
+    background-color: turquoise;
+    transition: all 0.2s ease-out;
+  }
+  #turquoiseRectangle {
+    background-color: turquoise;
+    transition: all 500ms ease-in-out;
+  }
 }
-.containerL:hover {
-  width: max-content;
-  transition: all 250ms ease-in-out;
-}
-.containerL:not(:hover) {
-  width: 12rem;
-  transition: all 250ms ease-in-out;
-}
-
-/* Hover sur ID "purple" transforme bg rouge linear, retourne default de la classe ".square" apres... */
-#purple:hover {
-  background-color: #44164d;
-  transition: all 0.2s ease-out;
-}
-
-/* Hover sur ID "green" transforme bg rouge linear, retourne default de la classe ".square" apres... */
-#green:hover {
-  background-color: #17471f;
-  transition: all 0.2s ease-out;
-}
-
-
-
-
-
-
-.containerR {
-  position: absolute;
-  right: 0%;
-  top: 6.5dvh;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 12rem;
-  height: max-content;
-  border: solid 10px black;
-  padding: 1rem;
-  overflow: hidden;
-}
-.containerR:hover {
-  width: max-content;
-  transition: all 250ms ease-in-out;
-}
-.containerR:not(:hover) {
-  width: 12rem;
-  transition: all 250ms ease-in-out;
-}
-
-/* Hover sur ID "red" transforme bg rouge linear, retourne default de la classe ".square" apres... */
-#red:hover {
-  background-color: #700303;
-  transition: all 0.2s ease-out;
-}
-
-#turquoise:hover {
-  background-color: turquoise;
-  transition: all 0.2s ease-out;
-}
-
-/* Ronds */
-.square {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 12rem;
-  height: 12rem;
-  background-color: aliceblue;
-
-  position: relative;
-  border-radius: 50%;
-}
-/* Rectangles */
-.rectangle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 12rem;
-  height: 12rem;
-  background-color: white;
-  position: absolute;
-  right: -100%;
-  top: 0;
-  border-radius: 50%;
-  z-index: -1;
-}
-/* CSS pour rectangles quand hover */
-.square:hover .rectangle {
-  display: flex;
-  transform: translateX(13rem);
-  transition: all 0.5s ease-in-out;
-  width: 24rem;
-  border-radius: 1rem;
-}
-/* CSS pour rectangles quand non-hover */
-.square:not(hover) .rectangle {
-  left: 0rem;
-
-  transition: all 0.5s ease-in-out;
-}
-}
-
-
-
-
-
-
-
-
-
