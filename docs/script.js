@@ -2,16 +2,31 @@
 /* Declare circle and rectangle and add an event listener to the circle to make the rectangle visible, using the class="show", on mouse click */
 let purple = document.getElementById('purple');
 let purpleRectangle = document.getElementById('purpleRectangle');
+
 purple.addEventListener('click', () => {
   purpleRectangle.classList.toggle('show');
   purple.classList.toggle('circleWhileShown');
+  greenRectangle.classList.remove('show');
+  green.classList.remove('circleWhileShown');
+  redRectangle.classList.remove('show');
+  red.classList.remove('circleWhileShown');
+  turquoiseRectangle.classList.remove('show');
+  turquoise.classList.remove('circleWhileShown');
 });
 /* Declare circle and rectangle and add an event listener to the circle to make the rectangle visible, using the class="show", on mouse click */
 let green = document.getElementById('green');
 let greenRectangle = document.getElementById('greenRectangle');
+
 green.addEventListener('click', () => {
   greenRectangle.classList.toggle('show');
   green.classList.toggle('circleWhileShown');
+  purpleRectangle.classList.remove('show');
+  purple.classList.remove('circleWhileShown');
+  redRectangle.classList.remove('show');
+  red.classList.remove('circleWhileShown');
+  turquoiseRectangle.classList.remove('show');
+  turquoise.classList.remove('circleWhileShown');
+
 });
 /* Declare circle and rectangle and add an event listener to the circle to make the rectangle visible, using the class="show", on mouse click */
 let red = document.getElementById('red');
@@ -19,6 +34,12 @@ let redRectangle = document.getElementById('redRectangle');
 red.addEventListener('click', () => {
   redRectangle.classList.toggle('show');
   red.classList.toggle('circleWhileShown');
+  purpleRectangle.classList.remove('show');
+  purple.classList.remove('circleWhileShown');
+  greenRectangle.classList.remove('show');
+  green.classList.remove('circleWhileShown');
+  turquoiseRectangle.classList.remove('show');
+  turquoise.classList.remove('circleWhileShown');
 });
 /* Declare circle and rectangle and add an event listener to the circle to make the rectangle visible, using the class="show", on mouse click */
 let turquoise = document.getElementById('turquoise');
@@ -26,6 +47,12 @@ let turquoiseRectangle = document.getElementById('turquoiseRectangle');
 turquoise.addEventListener('click', () => {
     turquoiseRectangle.classList.toggle('show');
     turquoise.classList.toggle('circleWhileShown');
+    purpleRectangle.classList.remove('show');
+    purple.classList.remove('circleWhileShown');
+    greenRectangle.classList.remove('show');
+    green.classList.remove('circleWhileShown');
+    redRectangle.classList.remove('show');
+    red.classList.remove('circleWhileShown');
 });
 })();
 

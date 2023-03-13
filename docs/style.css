@@ -161,7 +161,7 @@
 } /* Fin de Desktop */
 
 /* Styles for mobile */
-@media (orientation: portrait) and (max-width: 376px) {
+@media (orientation: portrait) and (max-width: 768px) {
   * {
     box-sizing: border-box;
     overflow-x: hidden;
@@ -184,7 +184,6 @@
 
   #navigationBar {
     display: flex;
-    flex-direction: column;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -192,7 +191,7 @@
     width: 100dvw;
     overflow-x: hidden;
     overflow-y: hidden;
-    padding: 1dvh;
+
   }
   #navigationBar:not(:hover) {
     transition: all 275ms ease-in;
@@ -204,10 +203,10 @@
   }
   #imageAccueil {
     display: flex;
-    width: 512px;
-    height: 512px;
-    margin-top: auto;
-    margin-bottom: auto;
+    width: 64px;
+    height: 64px;
+    align-self: center;
+    overflow-y: hidden;
   }
 
   /* Cercles */
@@ -216,8 +215,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 10dvh;
-    height: 10dvh;
+    width: 8dvh;
+    height: 8dvh;
     background-color: aliceblue;
     border-radius: 50%;
     font-size: 35%;
@@ -256,8 +255,8 @@
     transition: all 500ms ease-out;
   }
   .circleWhileShown {
-    width: 7dvh;
-    height: 7dvh;
+    width: 6dvh;
+    height: 6dvh;
     background-color: rgba(200, 200, 200, 0.15);
     z-index: 1;
     font-size: 20%;
