@@ -175,18 +175,17 @@
   #wrapperForEverything {
     height: 100dvh;
     width: 100dvw;
-    background-image: url("./bgRiviere_Mobile.JPG");
+    max-width: 768px;
+    background-image: url("./bgRiviere_Mobile.png");
     background-size: cover;
     background-position: center;
-    background-clip: border-box;
+    background-clip: padding-box;
     clip-path: inset(0 0 0 0);
   }
 
   #navigationBar {
     display: flex;
-    position: absolute;
-    top: 0%;
-    left: 0%;
+    position: sticky;
     height: 4dvh;
     width: 100dvw;
     overflow-x: hidden;
@@ -268,7 +267,7 @@
   #purple {
     position: absolute;
     top: 8dvh;
-    left: 2dvh;
+    left: 1dvh;
     cursor: pointer;
   }
   #purple:hover {
@@ -284,7 +283,7 @@
   #green {
     position: absolute;
     top: 8dvh;
-    left: 14dvh;
+    left: 11dvh;
   }
   #green:hover {
     background-color: #17471f;
@@ -299,7 +298,7 @@
   #red {
     position: absolute;
     top: 8dvh;
-    left: 26dvh;
+    left: 21dvh;
   }
   #red:hover {
     background-color: #700303;
@@ -314,7 +313,7 @@
   #turquoise {
     position: absolute;
     top: 8dvh;
-    left: 38dvh;
+    left: 31dvh;
   }
   #turquoise:hover {
     background-color: turquoise;
