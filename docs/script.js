@@ -57,11 +57,16 @@ turquoise.addEventListener('click', () => {
 })();
 
 (function iifeArrivalOfBubbles() {
-
+  setTimeout(wrapperArrival, 500);
   setTimeout(purpleArrival, 1000);
   setTimeout(greenArrival, 2000);
   setTimeout(redArrival, 3000);
-  setInterval(turquoiseArrival, 4000);
+  setTimeout(turquoiseArrival, 4000);
+
+  function wrapperArrival() {
+    const wrapper = document.getElementById('wrapperBubbles');
+    wrapper.classList.remove('loadAnimated');
+  }
 
   function purpleArrival() {
     const purple = document.getElementById('purple');

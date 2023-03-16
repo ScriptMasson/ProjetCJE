@@ -4,45 +4,82 @@
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   body {
     background-color: rgba(0, 0, 0, 0.85);
     font-family: cursive;
-  }
-  #wrapperForEverything {
-    height: 100dvh;
     width: 100dvw;
-    background-image: url("./bgChute.JPG");
-    background-size: cover;
-    z-index: -1;
+    background-color: #0a0412;
+    /**/
   }
+
   #navigationBar {
     display: flex;
     position: absolute;
     top: 0%;
     left: 0%;
-    height: 4dvh;
-    max-height: 4dvh;
+    height: 10dvh;
+    max-height: 1in;
     width: 100dvw;
     overflow: hidden;
+    transition: all 275ms ease-in;
+    gap: 0.25in;
   }
   #navigationBar:not(:hover) {
-    transition: all 275ms ease-in;
-    background-color: rgba(100, 100, 100, 0.15);
+    background-color: rgba(100, 100, 100, 0.05);
   }
   #navigationBar:hover {
-    transition: all 275ms ease-in;
     background-color: rgba(100, 100, 100, 0.85);
   }
-  #imageAccueil {
+  #imageLogo {
     display: flex;
     align-self: center;
     width: 64px;
     height: 64px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1%;
     overflow-y: hidden;
-    border-right: rgba(0, 0, 0, 0.85) 2px solid;
-    padding-right: 2px;
+
+
   }
+  #navigationBar:not(:hover) h1 {
+    color: white;
+    transition: all 500ms ease-in;
+    
+  }
+  #textJeremyMasson {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-right: rgba(0, 0, 0, 0.85) 2px solid;
+    border-left: rgba(0, 0, 0, 0.85) 2px solid;
+    align-items: center;
+    color: #44164d;
+    
+  }
+  #headerJeremyMasson {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+  #textDev {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #44164d;
+  }
+  #headerDev {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+  }
+
+
+
+
 
   /* Cercles */
   .cercle {
@@ -53,8 +90,8 @@
     width: 20dvh;
     height: 20dvh;
     background-color: aliceblue;
-    border-radius: 50%;
-    transition: all 1000ms ease-out;
+    /*border-radius: 50%;*/
+    transition: all 500ms ease-out;
   }
   /* Rectangles */
   .rectangle {
@@ -70,6 +107,9 @@
     height: 60dvh;
     background-color: white;
     border-radius: 3% 3%;
+  }
+  .rectangle p {
+    margin: auto;
   }
   .rectangle span {
     font-size: 5dvh;
@@ -88,21 +128,45 @@
   .circleWhileShown {
     width: 12dvw;
     height: 12dvw;
-    background-color: rgba(200, 200, 200, 0.15);
+    background-color: rgba(200, 200, 200, 0.25);
     z-index: 1;
-    transform: translateX(-5dvh);
+    transform: scaleY(1);
     transition: all 500ms ease-out;
   }
   .loadAnimated {
     transform: translateX(-100dvw);
-    background-color: black;
+    background-color: transparent;
+    color: transparent;
+  }
+
+  #containerForBubbles {
+    display: flex;
+    width: 100dvw;
+    height: 1200px;
+    position: absolute;
+    top: 10dvh;
+    left: 0%;
+    background-color: aliceblue;
+    background-image: url("./bgChute.JPG");
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+  }
+  #wrapperBubbles {
+    display: flex;
+    background-color: rgba(100, 100, 100, 0.55);
+    height: min-content;
+    width: min-content;
+    margin-top: 0.25in;
+    margin-bottom: 0.25in;
+    padding-top: 0.25in;
+    padding-bottom: 0.25in;
+    transition: all 500ms ease-out;
+    overflow-y: hidden;
   }
 
   /*  */
   #purple {
-    position: absolute;
-    top: 8dvh;
-    left: 8dvh;
     cursor: pointer;
   }
   /* Hover sur ID "purple" transforme bg rouge linear, retourne default de la classe ".square" apres... */
@@ -116,9 +180,6 @@
   }
 
   #green {
-    position: absolute;
-    top: 8dvh;
-    left: 40dvh;
   }
   /* Hover sur ID "green" transforme bg rouge linear, retourne default de la classe ".square" apres... */
   #green:hover {
@@ -131,9 +192,6 @@
   }
 
   #red {
-    position: absolute;
-    top: 8dvh;
-    left: 72dvh;
   }
   /* Hover sur ID "red" transforme bg rouge linear, retourne default de la classe ".square" apres... */
   #red:hover {
@@ -146,9 +204,6 @@
   }
 
   #turquoise {
-    position: absolute;
-    top: 8dvh;
-    left: 104dvh;
   }
   #turquoise:hover {
     background-color: turquoise;
