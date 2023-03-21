@@ -9,6 +9,7 @@
   body {
     background-color: rgba(0, 0, 0, 0.85);
     font-family: cursive;
+    height: 100dvh;
     width: 100dvw;
     background-color: #0a0412;
     /**/
@@ -19,8 +20,8 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    height: 10dvh;
-    max-height: 1in;
+    height: 100px;
+    max-height: 100px;
     width: 100dvw;
     overflow: hidden;
     transition: all 275ms ease-in;
@@ -41,13 +42,10 @@
     margin-bottom: auto;
     margin-left: 1%;
     overflow-y: hidden;
-
-
   }
   #navigationBar:not(:hover) h1 {
     color: white;
     transition: all 500ms ease-in;
-    
   }
   #textJeremyMasson {
     display: flex;
@@ -57,10 +55,9 @@
     border-left: rgba(0, 0, 0, 0.85) 2px solid;
     align-items: center;
     color: #44164d;
-    
   }
   #headerJeremyMasson {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-weight: bold;
   }
   #textDev {
@@ -77,10 +74,6 @@
     font-style: italic;
   }
 
-
-
-
-
   /* Cercles */
   .cercle {
     display: flex;
@@ -95,8 +88,9 @@
   }
   /* Rectangles */
   .rectangle {
+    z-index: 2;
     position: absolute;
-    top: 36dvh;
+    top: 280px;
     left: -100%;
     display: flex;
     flex-direction: column;
@@ -106,7 +100,6 @@
     width: 60dvw;
     height: 60dvh;
     background-color: white;
-    border-radius: 3% 3%;
   }
   .rectangle p {
     margin: auto;
@@ -122,13 +115,13 @@
     font-weight: bold;
   }
   .show {
-    left: 8dvh;
+    left: 0in;
     transition: all 500ms ease-out;
   }
   .circleWhileShown {
     width: 12dvw;
     height: 12dvw;
-    background-color: rgba(200, 200, 200, 0.25);
+    background-color: inherit;
     z-index: 1;
     transform: scaleY(1);
     transition: all 500ms ease-out;
@@ -142,9 +135,9 @@
   #containerForBubbles {
     display: flex;
     width: 100dvw;
-    height: 1200px;
+    height: 880px;
     position: absolute;
-    top: 10dvh;
+    top: 100px;
     left: 0%;
     background-color: aliceblue;
     background-image: url("./bgChute.JPG");
@@ -213,169 +206,81 @@
     background-color: turquoise;
     transition: all 500ms ease-in-out;
   }
+
+  #preContainerPhotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 980px;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    overflow: hidden;
+  }
+  #textPhotos {
+    color: white;
+    font-size: 120px;
+    font-style: oblique;
+    margin: 10px;
+  }
+  #containerPhotos {
+    position: absolute;
+    top: 1180px;
+    width: 100dvw;
+    height: 780px;
+  }
+
+  .loadAnimatedImage {
+    opacity: 0%;
+  }
+  #imgLayla {
+    border: white solid 4px;
+    display: flex;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transition: all 1000ms ease-in-out;
+  }
+  #textLayla {
+    position: absolute;
+    top: 43px;
+    left: 486px;
+    transition: all 500ms ease-in-out;
+    z-index: 2;
+    opacity: 0;
+    color: #44164d;
+    font-size: 60px;
+    font-weight: bold;
+    font-style: italic;
+
+  }
+  #imgChasey {
+    border: white solid 4px;
+    display: flex;
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 5%;
+    right: 5%;
+    transition: all 1000ms ease-in-out;
+  }
+  #textChasey {
+    position: absolute;
+    top: 300px;
+    right: 87px;
+    transition: all 500ms ease-in-out;
+    z-index: 2;
+    opacity: 0;
+    color: #44164d;
+    font-size: 60px;
+    font-weight: bold;
+    font-style: italic;   
+  }
+
+
 } /* Fin de Desktop */
 
 /* Styles for mobile */
-@media (orientation: portrait) and (max-width: 768px) {
-  * {
-    box-sizing: border-box;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    background-color: rgba(0, 0, 0, 0.85);
-    font-family: cursive;
-  }
-  #wrapperForEverything {
-    height: 100dvh;
-    width: 100dvw;
-    max-width: 768px;
-    background-image: url("./bgRiviere_Mobile.png");
-    background-size: cover;
-    background-position: center;
-    background-clip: padding-box;
-    clip-path: inset(0 0 0 0);
-  }
-
-  #navigationBar {
-    display: flex;
-    position: sticky;
-    height: 4dvh;
-    width: 100dvw;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-  }
-  #navigationBar:not(:hover) {
-    transition: all 275ms ease-in;
-    background-color: rgba(100, 100, 100, 0.25);
-  }
-  #navigationBar:hover {
-    transition: all 275ms ease-in;
-    background-color: rgba(0, 0, 0, 0.85);
-  }
-  #imageAccueil {
-    display: flex;
-    width: 64px;
-    height: 64px;
-    align-self: center;
-    overflow-y: hidden;
-  }
-
-  /* Cercles */
-  .cercle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 8dvh;
-    height: 8dvh;
-    background-color: aliceblue;
-    border-radius: 50%;
-    font-size: 35%;
-  }
-  /* Rectangles */
-  .rectangle {
-    box-sizing: border-box;
-    position: absolute;
-    top: 20dvh;
-    left: -100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 60dvw;
-    height: auto;
-    background-color: white;
-    border-radius: 3% 3%;
-    padding: 1dvh;
-  }
-  .rectangle span {
-    font-size: 50%;
-    font-style: italic;
-  }
-  .rectangle a {
-    all: unset;
-    color: azure;
-    font-style: italic;
-    font-weight: bold;
-  }
-
-  /* toggled classes via JS */
-  .show {
-    left: 8dvh;
-    transition: all 500ms ease-out;
-  }
-  .circleWhileShown {
-    width: 6dvh;
-    height: 6dvh;
-    background-color: rgba(200, 200, 200, 0.15);
-    z-index: 1;
-    font-size: 20%;
-    transition: all 500ms ease-out;
-  }
-
-  /* Circles styles */
-  /* ID "purple" */
-  #purple {
-    position: absolute;
-    top: 8dvh;
-    left: 1dvh;
-    cursor: pointer;
-  }
-  #purple:hover {
-    background-color: #44164d;
-    transition: all 0.2s ease-out;
-  }
-  #purpleRectangle {
-    background-color: #44164d;
-    transition: all 500ms ease-in-out;
-  }
-
-  /* ID "green" */
-  #green {
-    position: absolute;
-    top: 8dvh;
-    left: 11dvh;
-  }
-  #green:hover {
-    background-color: #17471f;
-    transition: all 0.2s ease-out;
-  }
-  #greenRectangle {
-    background-color: #17471f;
-    transition: all 500ms ease-in-out;
-  }
-
-  /* ID "red"  */
-  #red {
-    position: absolute;
-    top: 8dvh;
-    left: 21dvh;
-  }
-  #red:hover {
-    background-color: #700303;
-    transition: all 0.2s ease-out;
-  }
-  #redRectangle {
-    background-color: #700303;
-    transition: all 500ms ease-in-out;
-  }
-
-  /* ID "turquoise"  */
-  #turquoise {
-    position: absolute;
-    top: 8dvh;
-    left: 31dvh;
-  }
-  #turquoise:hover {
-    background-color: turquoise;
-    transition: all 0.2s ease-out;
-  }
-  #turquoiseRectangle {
-    background-color: turquoise;
-    transition: all 500ms ease-in-out;
-  }
-}

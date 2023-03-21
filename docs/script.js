@@ -1,3 +1,39 @@
+let observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log('Element has Intersected with the Viewport!');
+      // Remove the "my-class" class from the target element:
+      entry.target.classList.remove('loadAnimatedImage');
+      console.log(entry.target + ' ' + 'no longer has the class "loadAnimatedImage and is unobserve"');
+      // Stop observing the target element:
+      observer.unobserve(entry.target); 
+    }
+  });
+});
+
+// Observe the element <img>:
+let imgLayla = document.getElementById('imgLayla');
+(function iifeObservedOrNah() {
+  let isItTrue = observer.observe(imgLayla);
+  isItTrue;
+  if (!isItTrue) {return setTimeout(makeTextLaylaAppear, 2000)}
+})();
+function makeTextLaylaAppear() {
+  let text = document.getElementById('textLayla');
+  return text.style.opacity = 100;
+}
+
+let imgChasey = document.getElementById('imgChasey');
+(function iifeObservedOrNah() {
+  let isItTrue = observer.observe(imgChasey);
+  isItTrue;
+  if (!isItTrue) {return setTimeout(makeTextChaseyAppear, 2000)}
+})();
+function makeTextChaseyAppear() {
+  let text = document.getElementById('textChasey');
+  return text.style.opacity = 100;
+}
+
 (function iifeClickEventListenerToCircles() {
 /* Declare circle and rectangle and add an event listener to the circle to make the rectangle visible, using the class="show", on mouse click */
 let purple = document.getElementById('purple');
@@ -88,5 +124,8 @@ turquoise.addEventListener('click', () => {
     turquoise.classList.remove('loadAnimated');
   };
 })();
+
+
+
 
 
