@@ -4,85 +4,143 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Bonjour!  </title>
+    <title>Bonjour!</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
+    <nav id="navigationBar">
+      <div id="imageLogo">
+        <img
+          src="./64bit_Logo_1024px.png"
+          alt="MAISON"
+          width="64px"
+          height="64px"
+        />
+      </div>
+      <div id="textJeremyMasson">
+        <h1 id="headerJeremyMasson">Jeremy Masson</h1>
+      </div>
+      <div id="textDev">
+        <h1 id="headerDev">~ Développeur Web Auto-Didacte ~</h1>
+      </div>
+    </nav>
 
-      <nav id="navigationBar">
-        <div id="imageLogo">
-          <img 
-            src="./64bit_Logo_1024px.png"
-            alt="MAISON"
-            width="64px"
-            height="64px"
-          />
-        </div>
-        <div id="textJeremyMasson">
-          <h1 id="headerJeremyMasson"> Jeremy Masson </h1>
-        </div>
-        <div id="textDev">
-          <h1 id="headerDev"> ~ Développeur Web Auto-Didacte ~ </h1>
-        </div>
-      </nav>
-
-    <article id="containerForBubbles">
+    <div id="containerForBubbles">
       <div id="wrapperBubbles" class="loadAnimated">
+        <div id="purple" class="cercle loadAnimated">
+          <span> Créativité </span>
+        </div>
+        <div id="purpleRectangle" class="rectangle">
+          <span> Je suis artistique de nature! </span>
+          <span> La création est pour moi une passion :D </span> <br />
+          <span> Voici quelques <a href=""> peintures</a>, </span>
+          <span> ainsi que quelques <a href=""> photos</a>! </span>
+        </div>
 
-      <div id="purple" class="cercle loadAnimated">
-        <span> Créativité </span>
-      </div>
-      <div id="purpleRectangle" class="rectangle">
-        <span> Je suis artistique de nature! </span>
-        <span> La création est pour moi une passion :D </span> <br />
-        <span> Voici quelques <a href=""> peintures</a>, </span>
-        <span> ainsi que quelques <a href=""> photos</a>! </span>
-      </div>
+        <div id="green" class="cercle loadAnimated">
+          <span> Habileté Informatique </span>
+        </div>
+        <div id="greenRectangle" class="rectangle">
+          <span> Je suis très bon en informatique, </span>
+          <span> ayant aimé les jeux-vidéos durant mon enfance, </span>
+          <span>
+            j'ai grandit avec une passion pour la logique qui se cache dans
+            l'informatique!</span
+          >
+          <span> Voici mon <a href=""> ordinateur</a>!</span>
+          <span>
+            (lien PCPartPicker
+            <a href="https://pcpartpicker.com/list/fZBpTn" target="_blank">
+              Ici </a
+            >)</span
+          >
+        </div>
 
-      <div id="green" class="cercle loadAnimated">
-        <span> Habileté Informatique </span>
-      </div>
-      <div id="greenRectangle" class="rectangle">
-        <span> Je suis très bon en informatique, </span>
-        <span> ayant aimé les jeux-vidéos durant mon enfance, </span>
-        <span>
-          j'ai grandit avec une passion pour la logique qui se cache dans
-          l'informatique!</span
-        >
-        <span> Voici mon <a href=""> ordinateur</a>!</span>
-        <span> (lien PCPartPicker  <a href="https://pcpartpicker.com/list/fZBpTn" target="_blank"> Ici </a>)</span>
-      </div>
+        <div id="red" class="cercle loadAnimated">
+          <span> Rouge </span>
+        </div>
+        <div id="redRectangle" class="rectangle">
+          <span> Description ici </span>
+        </div>
 
-      <div id="red" class="cercle loadAnimated">
-        <span> Rouge </span>
+        <div id="turquoise" class="cercle loadAnimated">
+          <span> Turquoise </span>
+        </div>
+        <div id="turquoiseRectangle" class="rectangle">
+          <span> Description ici </span>
+        </div>
       </div>
-      <div id="redRectangle" class="rectangle">
-        <span> Description ici </span>
-      </div>
-
-      <div id="turquoise" class="cercle loadAnimated">
-        <span> Turquoise </span>
-      </div>
-      <div id="turquoiseRectangle" class="rectangle">
-        <span> Description ici </span>
-      </div>
-      
     </div>
-    </article> 
-    
-    <div id="preContainerPhotos">
-      <div id="textPhotos">
-        ~ Photographie 
+
+    <div id="containerProfil">
+      <img id="imgMoi" src="./moi.png" alt="moi" width="300px" height="400px"/>
+      <br>
+      <div id="textMoi" class="zeroOpacity"> 
+        <p>  </p>
       </div>
+    </div>
+
+    <div id="preContainerPhotos">
+      <div id="textPhotos">~ Photographie</div>
     </div>
 
     <div id="containerPhotos">
-      <p id="textLayla"> Layla </p>
-      <img id="imgLayla" src="./photoLayla.JPG" alt="monLapin" class="loadAnimatedImage" width="600px" height="400px">
-      <p id="textChasey"> Chasey! </p>
-      <img id="imgChasey" src="./imageChasey.JPG" alt="monChien" class="loadAnimatedImage" width="600px" height="400px">
+      <!-- Start of container for my photos -->
+      <div class="containedPhoto zeroOpacity observedStuff">
+        <img
+          src="./photoLayla.JPG"
+          alt="monLapin"
+          class="zeroOpacity observedStuff"
+          width="600px"
+          height="400px"
+        />
+      </div>
+      <div class="containedPhoto zeroOpacity observedStuff">
+        <img
+          src="./imageChasey.JPG"
+          alt="monChien"
+          class="zeroOpacity observedStuff"
+          width="600px"
+          height="400px"
+        />
+      </div>
+      <div class="containedPhoto zeroOpacity observedStuff">
+        <img
+          src="./photoTaki.jpg"
+          alt="mesChats"
+          class="zeroOpacity observedStuff"
+          width="600px"
+          height="400px"
+        />
+      </div>
+      <div class="containedPhoto zeroOpacity observedStuff">
+        <img
+          src="./imagePaquetDeTrouble.jpg"
+          alt="mesChats"
+          class="zeroOpacity observedStuff"
+          width="600px"
+          height="400px"
+        />
+      </div>
+      <div class="containedPhoto zeroOpacity observedStuff">
+        <img
+          src="./imagePetitOiseau.JPG"
+          alt="unOiseau"
+          class="zeroOpacity observedStuff"
+          width="600px"
+          height="400px"
+        />
+      </div>
+      <div class="containedPhoto zeroOpacity observedStuff">
+        <img
+          src="./imageFleur.JPG"
+          alt="unOiseau"
+          class="zeroOpacity observedStuff"
+          width="600px"
+          height="400px"
+        />
+      </div>
     </div>
-
   </body>
 </html>
