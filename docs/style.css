@@ -20,6 +20,9 @@
     height: 100dvh;
     width: 100dvw;
     background-color: #0a0412;
+    background-image: url("./bgChute3000x2000.jpg");
+    background-size: cover;
+    background-position: center;
     /**/
   }
 
