@@ -100,10 +100,10 @@ turquoise.addEventListener('click', () => {
 
 (function iifeArrivalOfBubbles() {
   setTimeout(wrapperArrival, 500);
-  setTimeout(purpleArrival, 1000);
-  setTimeout(greenArrival, 2000);
-  setTimeout(redArrival, 3000);
-  setTimeout(turquoiseArrival, 4000);
+  setTimeout(purpleArrival, 1500);
+  setTimeout(greenArrival, 2500);
+  setTimeout(redArrival, 3500);
+  setTimeout(turquoiseArrival, 4500);
 
   function wrapperArrival() {
     const wrapper = document.getElementById('wrapperBubbles');
