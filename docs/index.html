@@ -9,26 +9,28 @@
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <nav id="navigationBar">
-      <div id="imageLogo">
+    <nav id="navigationBar" class="flexContainer">
+      <div class="flexItem">
         <img
+          id="imgLogo"
           src="./64bit_Logo_1024px.png"
           alt="MAISON"
           width="64px"
           height="64px"
         />
       </div>
-      <div id="textJeremyMasson">
+      <div class="flexItem">
         <h1 id="headerJeremyMasson">Jeremy Masson</h1>
       </div>
-      <div id="textDev">
-        <h1 id="headerDev">~ Développeur Web Auto-Didacte ~</h1>
+      <div class="flexItem">
+        <h1 id="headerDev">/ Développeur Web Auto-Didacte /</h1>
       </div>
     </nav>
 
-    <div id="containerBubbles">
-      <div id="wrapperBubbles" class="loadAnimated">
-        <div id="purple" class="cercle loadAnimated">
+    <div id="areaForSkills">
+      <div id="wrapperSkills" class="loadAnimated">
+
+        <div id="purple" class="circle loadAnimated">
           <span> Créativité </span>
         </div>
         <div id="purpleRectangle" class="rectangle">
@@ -38,7 +40,7 @@
           <span> ainsi que quelques <a href=""> photos</a>! </span>
         </div>
 
-        <div id="green" class="cercle loadAnimated">
+        <div id="green" class="circle loadAnimated">
           <span> Habileté Informatique </span>
         </div>
         <div id="greenRectangle" class="rectangle">
@@ -57,33 +59,40 @@
           >
         </div>
 
-        <div id="red" class="cercle loadAnimated">
+        <div id="red" class="circle loadAnimated">
           <span> Rouge </span>
         </div>
         <div id="redRectangle" class="rectangle">
           <span> Description ici </span>
         </div>
 
-        <div id="turquoise" class="cercle loadAnimated">
+        <div id="turquoise" class="circle loadAnimated">
           <span> Turquoise </span>
         </div>
         <div id="turquoiseRectangle" class="rectangle">
           <span> Description ici </span>
         </div>
+
       </div>
     </div>
 
     <div id="containerProfil">
       <img id="imgMoi" src="./moi.png" alt="moi" />
-      <br>
-      <div id="textMoi" class="zeroOpacity"> 
-        <p> Bonjour! :) </p>
+      <br />
+      <div id="textMoi" class="zeroOpacity">
+        <p>Bonjour! :)</p>
       </div>
     </div>
 
     <div id="preContainerPhotos">
-      <div id="textPhotos">~ Photographie </div>
-      <img id="imgAppareilPhoto" src="./16bit_AppareilPhoto.png" alt="AppareilPhoto" width="128px" height="128px">
+      <div id="textPhotos">~ Photographie</div>
+      <img
+        id="imgAppareilPhoto"
+        src="./16bit_AppareilPhoto.png"
+        alt="AppareilPhoto"
+        width="128px"
+        height="128px"
+      />
     </div>
 
     <div id="containerPhotos">
