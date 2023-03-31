@@ -89,7 +89,7 @@ body {
   background-image: url("./bgRiviere_Mobile.png");
   background-attachment: scroll;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   background-clip: border-box;
   background-repeat: no-repeat;
   padding-top: 8px;
@@ -374,7 +374,7 @@ body {
     top: 0%;
     left: 0%;
     bottom: auto;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-clip: border-box;
     background-image: url("./bgChute3000x2000.jpg");
     background-position: center;
