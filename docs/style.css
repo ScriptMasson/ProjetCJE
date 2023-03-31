@@ -87,7 +87,7 @@ body {
   left: 0%;
   background-image: url("./bgRiviere_Mobile.png");
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
   background-clip: border-box;
   background-repeat: no-repeat;
   padding-top: 8px;
