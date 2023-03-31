@@ -23,6 +23,9 @@ body {
   font-family: Verdana, sans-serif;
   font-weight: bold;
   font-size: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .flexContainer {
@@ -298,15 +301,18 @@ body {
     width: 100dvw;
     background-color: var(--bgColor);
 
-
     background-size: cover;
     background-position: center;
     background-clip: border-box;
     font-family: Verdana, sans-serif;
     font-weight: bold;
     font-size: 1rem;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
-  
+
   .flexContainer {
     display: flex;
     justify-content: center;
@@ -316,7 +322,7 @@ body {
     height: fit-content;
     width: fit-content;
   }
-  
+
   #navigationBar {
     width: 100dvw;
     height: 80px;
@@ -357,7 +363,7 @@ body {
     font-family: Verdana, sans-serif;
     font-style: italic;
   }
-  
+
   #areaForSkills {
     width: 100dvw;
     height: 600px;
@@ -489,7 +495,7 @@ body {
     background-color: #00b199;
     transition: all 500ms ease-in-out;
   }
-  
+
   #containerProfil {
     display: flex;
     gap: 0.5in;
@@ -512,7 +518,7 @@ body {
     width: 240px;
     height: 300px;
   }
-  
+
   #preContainerPhotos {
     display: flex;
     gap: 0.5in;
@@ -535,7 +541,7 @@ body {
     width: 64px;
     height: 64px;
   }
-  
+
   #containerPhotos {
     display: grid;
     place-items: center;
@@ -547,6 +553,7 @@ body {
     top: 1140px;
     width: 100dvw;
     height: min-content;
+    overflow-x: auto;
   }
   .containedPhoto {
     object-fit: scale-down;
@@ -560,7 +567,7 @@ body {
     width: 300px;
     height: 200px;
   }
-  
+
   .zeroOpacity {
     opacity: 0%;
   }
