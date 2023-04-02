@@ -434,7 +434,7 @@ body {
     width: 12vw;
     height: 12vw;
     overflow: hidden;
-    background-color: rgb(128, 128, 128);
+    background-color: rgba(128, 128, 128, 0.5);
     box-shadow: 0 2vh rgba(0, 0, 0, 0.85);
     margin-bottom: 2vh;
     transition: all 500ms ease-out;
@@ -583,8 +583,9 @@ body {
   }
 
   #containerPhotos {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     place-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
@@ -597,16 +598,16 @@ body {
     overflow-x: auto;
   }
   .containedPhoto {
-    object-fit: scale-down;
-    width: max-content;
-    height: max-content;
-    border: white solid 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    border: white solid 1vw;
     transition: all 1000ms ease-in-out;
     overflow: hidden;
   }
   .containedPhoto img {
     object-fit: cover;
-
   }
 
   .zeroOpacity {
