@@ -46,7 +46,7 @@ body {
   grid-template-rows: 1fr 1fr;
   align-items: center;
   width: 100vw;
-  height: 8rem;
+  height: 10vh;
   position: relative;
   top: 0%;
   left: 0%;
@@ -102,7 +102,7 @@ body {
 
 #areaForSkills {
   width: 100vw;
-  height: 600px;
+  height: 80vh;
   display: block;
   position: relative;
   top: 0%;
@@ -123,11 +123,13 @@ body {
 }
 #wrapperSkills {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: rgba(100, 100, 100, 0.55);
-  height: min-content;
-  width: 60vw;
-  padding: 8px;
-  gap: 8px;
+  height: 10vh;
+  width: 100vw;
+  padding: 1vs;
+  gap: 1vw;
   transition: all 500ms ease-out;
   overflow: hidden;
 }
@@ -143,9 +145,10 @@ body {
   box-shadow: 0 1vh rgba(0, 0, 0, 0.85);
   margin-bottom: 2vh;
   transition: all 1000ms ease-out;
-  border-radius: 100%;
+  border-radius: 25%;
   border-style: inset;
-  border-width: 4px;
+  border-width: 1vw;
+  font-size: 1vw;
 }
 .rectangle {
   width: 90vw;
@@ -161,13 +164,11 @@ body {
   color: rgba(255, 255, 255, 0.4);
   padding: 4px;
   opacity: 0;
+  font-size: 3vh;
 }
 .show {
   opacity: 100;
   transition: all 1000ms ease-out;
-}
-.rectangle p {
-  font-size: 2vw;
 }
 .rectangle span {
   font-style: italic;
@@ -232,50 +233,51 @@ body {
 
 #containerProfil {
   display: flex;
-  gap: 0.5in;
+  gap: 1vw;
   position: relative;
   top: 0%;
   width: 100vw;
-  height: 360px;
-  padding: 0.375in;
+  height: 40vh;
   background-color: white;
   overflow: hidden hidden;
+  align-items: center;
 }
 #textMoi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  right: 0%;
-  padding: 8px;
-  width: 200px;
-  height: 100px;
+  right: 5vw;
+  padding: 1vw;
+  width: 40vw;
+  height: 20vh;
   border: black solid 4px;
   transition: all 1000ms ease-in-out;
 }
+#containerProfil img {object-fit: cover;}
 #imgMoi {
-  width: 192px;
-  height: 192px;
+ height: 30vh;
 }
 
 #preContainerPhotos {
   display: flex;
-  gap: 0.5in;
+  gap: 1vw;
   justify-content: center;
   align-items: center;
   position: relative;
   top: 0%;
-  width: 100%;
-  height: 100px;
+  width: 100vw;
+  height: 10vh;
   background-color: black;
   overflow: hidden;
 }
 #textPhotos {
   color: white;
-  font-size: 16px;
+  font-size: 8vw;
   font-style: oblique;
-  margin: 10px;
 }
 #imgAppareilPhoto {
-  width: 64px;
-  height: 64px;
+  width: 16vw;
 }
 
 
@@ -297,6 +299,7 @@ body {
   border: white solid 4px;
   transition: all 1000ms ease-in-out;
   overflow: hidden;
+  
 }
 .containedPhoto img {
   object-fit: cover;
