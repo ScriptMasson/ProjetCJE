@@ -126,7 +126,7 @@ body {
   justify-content: space-around;
   align-items: center;
   background-color: rgba(100, 100, 100, 0.55);
-  height: 10vh;
+  height: 20vh;
   width: 100vw;
   padding: 1vs;
   gap: 1vw;
@@ -138,24 +138,24 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 12vw;
-  height: 12vw;
+  width: 20vw;
+  height: 20vw;
   overflow: hidden;
   background-color: rgb(56, 56, 56);
-  box-shadow: 0 1vh rgba(0, 0, 0, 0.85);
+  box-shadow: 0 2vh rgba(0, 0, 0, 0.85);
   margin-bottom: 2vh;
   transition: all 1000ms ease-out;
   border-radius: 25%;
   border-style: inset;
   border-width: 1vw;
-  font-size: 1vw;
+  font-size: 3vw;
 }
 .rectangle {
   width: 90vw;
   height: max-content;
   position: absolute;
   bottom: 10%;
-  left: 0%;
+  left: -100dvw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,6 +167,7 @@ body {
   font-size: 3vh;
 }
 .show {
+  left: 0%;
   opacity: 100;
   transition: all 1000ms ease-out;
 }
@@ -180,8 +181,8 @@ body {
   font-weight: bold;
 }
 .circleWhileShown {
-  transform: translateY(1vh);
-  height: 12vw;
+  transform: translateY(2vh);
+  height: 20vwvw;
   box-shadow: none;
   z-index: 1;
   transition: all 750ms ease-out;
@@ -199,6 +200,7 @@ body {
 }
 #green {
   border-color: #22692e;
+  font-size: 2vw;
 }
 #green:hover {
   background-color: #17471f;
@@ -494,6 +496,7 @@ body {
     transition: all 500ms ease-in-out;
   }
   #green {
+    font-size: 1vw;
     border-color: #22692e;
   }
   #green:hover {
